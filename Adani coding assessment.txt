@@ -1,0 +1,29 @@
+import numpy as np
+
+from operator import itemgetter
+
+def create2d(r, c):
+
+    li = np.random.randint(0, 101, size=(r, c))
+
+    return li
+
+
+
+def sortli(li, ci):
+
+    sortlist = sorted(li,key=itemgetter(ci))
+
+    return sortlist
+
+r = 5
+
+c = 5
+
+
+li = create2d(r, c)
+    
+ci = 2
+
+
+print(sortli(li, ci))
